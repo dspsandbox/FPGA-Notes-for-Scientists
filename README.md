@@ -7,6 +7,6 @@ Some of the discussed topics are:
 * Examples on custom FPGA designs using *boolean* (1-bit) and *integer* (> 1-bit) data types, iterfacing digital IOs and ADCs/DACs, respectively. 
 * Recurrent applications such as PID controllers, filtering, waveform synthesis...
 ---
---> Get strarted at the [Project Wiki](https://github.com/dspsandbox/FPGA-Lectures-for-Scientists/wiki) <img src="https://ph-files.imgix.net/d224001c-e5b7-4e51-95f6-8d692887d14b?auto=format&auto=compress&codec=mozjpeg&cs=strip" width=30> 
+--> Get strarted at the [Project Wiki](https://github.com/dspsandbox/FPGA-Lectures-for-Scientists/wiki) <img src="https://ph-files.imgix.net/d224001c-e5b7-4e51-95f6-8d692887d14b?auto=format&auto=compress&codec=mozjpeg&cs=strip" width=35> 
 
 --> Feedback and questions are very welcome and collected [here](https://github.com/dspsandbox/FPGA-Lectures-for-Scientists/issues).
