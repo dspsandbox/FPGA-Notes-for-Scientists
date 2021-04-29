@@ -1,9 +1,8 @@
 # FPGA Lectures for Scientists
-This repository is a collection of hands-on FPGA programming examples, for scientists without (or very basic) experience in FPGA programming. The intend is to:
-* Provide simple functional examples, which incrementally incroporate new FPGA programming concepts. 
-* Build custom FPGA designs using *boolean* (1-bit, interfacing digital I/O) and *integer* (> 1-bit, interfacing DAC/ADC) data types.
-* Demonstrate how to control and stream data into (out of) the FPGA via Python.
-* Use open source code, free software tools and low-cost FPGA hardware.  
+This repository is a collection of hands-on FPGA programming examples, for scientists without (or very basic) experience in FPGA programming. The intend is to provide simple, functional and open-source examples, which incrementally incroporate new FPGA programming concepts. Some of the discussed topics are:
+* How to use the Xilinx toolchain for FPGA design, simulation and bitstream generation.
+* How to use Python (PYNQ) to control and stream data into (out of) the FPGA.
+* Examples on custom FPGA designs using *boolean* (1-bit, interfacing digital I/O) and *integer* (> 1-bit, interfacing DAC/ADC) data types.
 
 --> Get strarted at the [Project Wiki](https://github.com/dspsandbox/FPGA-Lectures-for-Scientists/wiki).
 
