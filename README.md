@@ -5,4 +5,6 @@ This repository is a collection of hands-on FPGA programming examples, for scien
 * Describe how to build, control and stream data into (out of) custom FPGA designs.
 * Use open source code, free software tools and low-cost FPGA hardware.  
 
---> Get strarted at the [Project Wiki](https://github.com/dspsandbox/FPGA-Lectures-for-Scientists/wiki)
+--> Get strarted at the [Project Wiki](https://github.com/dspsandbox/FPGA-Lectures-for-Scientists/wiki).
+
+--> Feedback and questions are very welcome and collected [here](https://github.com/dspsandbox/FPGA-Lectures-for-Scientists/issues).
