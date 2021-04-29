@@ -3,6 +3,7 @@ This repository is a collection of hands-on FPGA programming projects, for scien
 * How to use the Xilinx toolchain for FPGA design, simulation and bitstream generation.
 * How to use Python (PYNQ) to control and stream data into (out of) a runnig FPGA design.
 * Examples on custom FPGA designs using *boolean* (1-bit) and *integer* (> 1-bit) data types, iterfacing digital IOs and ADCs/DACs, respectively. 
+* Recurrent applications such as PID controllers, filtering, waveform synthesis...
 
 --> Get strarted at the [Project Wiki](https://github.com/dspsandbox/FPGA-Lectures-for-Scientists/wiki).
 
