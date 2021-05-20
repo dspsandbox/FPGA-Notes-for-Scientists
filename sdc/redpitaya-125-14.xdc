@@ -22,8 +22,8 @@
 #set_property PACKAGE_PIN T14     [get_ports {adc_data_1_i[9]}]
 #set_property PACKAGE_PIN T15     [get_ports {adc_data_1_i[10]}]
 #set_property PACKAGE_PIN V15     [get_ports {adc_data_1_i[11]}]
-#set_property PACKAGE_PIN T16     [get_ports {adc_data_1_i[0][12]}]
-#set_property PACKAGE_PIN V16     [get_ports {adc_data_1_i[0][13]}]
+#set_property PACKAGE_PIN T16     [get_ports {adc_data_1_i[12]}]
+#set_property PACKAGE_PIN V16     [get_ports {adc_data_1_i[13]}]
 
 ## ADC 1 data
 #set_property IOSTANDARD LVCMOS18 [get_ports {adc_data_2_i[*]}]
