@@ -1,8 +1,8 @@
 ##############################################################################
-# REDPITAYA-125-14 CONSTRAINTS FILE                                          #
-#                                                                            #
-# Simplified version of the offical .xdc file in:                            #
-# https://github.com/RedPitaya/RedPitaya/blob/master/fpga/sdc/red_pitaya.xdc #  
+# REDPITAYA-125-14 CONSTRAINTS FILE                                          
+#                                                                            
+# Simplified version of the .xdc file in:                           
+# https://github.com/RedPitaya/RedPitaya/blob/master/fpga/sdc/red_pitaya.xdc  
 ##############################################################################
 
 #### ADC
@@ -61,7 +61,7 @@
 #set_property IOSTANDARD LVCMOS33 [get_ports {dac_data_o[*]}]
 #set_property SLEW       SLOW     [get_ports {dac_data_o[*]}]
 #set_property DRIVE      4        [get_ports {dac_data_o[*]}]
-##set_property IOB        TRUE     [get_ports {dac_data_o[*]}]
+#set_property IOB        TRUE     [get_ports {dac_data_o[*]}]
 
 #set_property PACKAGE_PIN M19 [get_ports {dac_data_o[0]}]
 #set_property PACKAGE_PIN M20 [get_ports {dac_data_o[1]}]
@@ -82,7 +82,7 @@
 #set_property IOSTANDARD LVCMOS33 [get_ports dac_*_o]
 #set_property SLEW       FAST     [get_ports dac_*_o]
 #set_property DRIVE      8        [get_ports dac_*_o]
-##set_property IOB        TRUE     [get_ports dac_*_o]
+#set_property IOB        TRUE     [get_ports dac_*_o]
 
 #set_property PACKAGE_PIN M17 [get_ports dac_wrt_o]
 #set_property PACKAGE_PIN N16 [get_ports dac_sel_o]
@@ -175,3 +175,9 @@
 #set_property PACKAGE_PIN G14     [get_ports {led_o[5]}]
 #set_property PACKAGE_PIN J15     [get_ports {led_o[6]}]
 #set_property PACKAGE_PIN J14     [get_ports {led_o[7]}]
+
+
+#### Clock constraints (adding +/-1.000ns margin to 3.400ns input delay)                                                       
+create_clock -period 8.000 -name adc_clk [get_ports adc_clk_p_i]
+set_input_delay -clock adc_clk -min 2.400 [get_ports adc_data_*_i[*]] 
+set_input_delay -clock adc_clk -max 4.400 [get_ports adc_data_*_i[*]] 
