@@ -1,7 +1,7 @@
 ##############################################################################
 # REDPITAYA-125-14 CONSTRAINTS FILE                                          
 #                                                                            
-# Simplified version of the .xdc file in:                           
+# Simplified version of the offical .xdc file in:                           
 # https://github.com/RedPitaya/RedPitaya/blob/master/fpga/sdc/red_pitaya.xdc  
 ##############################################################################
 
@@ -177,7 +177,7 @@
 #set_property PACKAGE_PIN J14     [get_ports {led_o[7]}]
 
 
-#### Clock constraints (adding +/-1.000ns margin to 3.400ns input delay)                                                       
-create_clock -period 8.000 -name adc_clk [get_ports adc_clk_p_i]
-set_input_delay -clock adc_clk -min 2.400 [get_ports adc_data_*_i[*]] 
-set_input_delay -clock adc_clk -max 4.400 [get_ports adc_data_*_i[*]] 
+#### Clock constraints (adding +/-1.000ns margin to offical 3.400ns input delay)                                                       
+#create_clock -period 8.000 -name adc_clk_p_i [get_ports adc_clk_p_i]
+#set_input_delay -clock adc_clk_p_i -min 2.400 [get_ports adc_data_*_i[*]] 
+#set_input_delay -clock adc_clk_p_i -max 4.400 [get_ports adc_data_*_i[*]] 
