@@ -10,6 +10,7 @@ This repository is a collection of hands-on FPGA programming projects for scient
 * Tutorials:
    * [LED blink](../../wiki/LED-blink)
    * [Analog echo](../../wiki/Analog-echo)
+   * [DMA transfer](../../wiki/DMA-transfer)
 
 ***
 
