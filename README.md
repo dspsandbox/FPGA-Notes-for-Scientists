@@ -14,6 +14,6 @@ This repository is a collection of hands-on FPGA programming projects for scient
 
 ***
 
-:information_source: Feedback and questions are very welcome and collected [here](https://github.com/dspsandbox/FPGA-Lectures-for-Scientists/issues).
+:information_source: Feedback and questions (including proposals for new tutorials) are very welcome and collected [here](https://github.com/dspsandbox/FPGA-Lectures-for-Scientists/issues).
  
  ***
