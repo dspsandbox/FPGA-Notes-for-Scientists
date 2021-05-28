@@ -138,6 +138,28 @@
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
+      <spirit:name>RST.RESETN</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>resetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.RST.RESETN.POLARITY">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
       <spirit:name>CLK.CLK_125</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
@@ -172,7 +194,7 @@
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>CLK.CLK_250_M150</spirit:name>
+      <spirit:name>CLK.CLK_250</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -182,23 +204,23 @@
             <spirit:name>CLK</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>clk_250_m150</spirit:name>
+            <spirit:name>clk_250</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_250_M150.FREQ_HZ">250000000</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_250.FREQ_HZ">250000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_250_M150.PHASE">-150</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_250.PHASE">0.000</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>CLK.CLK_250_M120</spirit:name>
+      <spirit:name>CLK.CLK_250_M45</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -208,40 +230,18 @@
             <spirit:name>CLK</spirit:name>
           </spirit:logicalPort>
           <spirit:physicalPort>
-            <spirit:name>clk_250_m120</spirit:name>
+            <spirit:name>clk_250_m45</spirit:name>
           </spirit:physicalPort>
         </spirit:portMap>
       </spirit:portMaps>
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_250_M120.FREQ_HZ">250000000</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_250_M45.FREQ_HZ">250000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_250_M120.PHASE">-120</spirit:value>
-        </spirit:parameter>
-      </spirit:parameters>
-    </spirit:busInterface>
-    <spirit:busInterface>
-      <spirit:name>RST.RESETN</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
-      <spirit:slave/>
-      <spirit:portMaps>
-        <spirit:portMap>
-          <spirit:logicalPort>
-            <spirit:name>RST</spirit:name>
-          </spirit:logicalPort>
-          <spirit:physicalPort>
-            <spirit:name>resetn</spirit:name>
-          </spirit:physicalPort>
-        </spirit:portMap>
-      </spirit:portMaps>
-      <spirit:parameters>
-        <spirit:parameter>
-          <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.RST.RESETN.POLARITY">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_250_M45.PHASE">-45</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -260,7 +260,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6a6555a8</spirit:value>
+            <spirit:value>22d750e1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -276,7 +276,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>98511c9c</spirit:value>
+            <spirit:value>ac48efa3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -310,7 +310,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>clk_250_m120</spirit:name>
+        <spirit:name>clk_250</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -323,7 +323,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>clk_250_m150</spirit:name>
+        <spirit:name>clk_250_m45</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -502,12 +502,8 @@
       <spirit:file>
         <spirit:name>src/dac_bd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_23462084</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f3f74b12</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -526,10 +522,6 @@
         <spirit:name>sim/dac_bd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -560,36 +552,36 @@
       <xilinx:displayName>Redpitaya-125-14-dac</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-05-24T12:36:36Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2021-05-28T06:21:51Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e706611_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@54cd1801_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@68ae673d_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@66e5a43a_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@46a2c495_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c36da34_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@396ed40d_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dc03e9b_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a10935_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@18547ed1_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@27b55e75_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cd53f7d_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b320ebc_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fddd160_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1253394e_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@45863719_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b300a_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@53ab0e3d_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@f6da9e4_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2604d119_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@17f7905a_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@267050f4_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60af67fb_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68f21fff_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c991814_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62b43fe5_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77487085_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b421fbc_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74d10029_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e948b99_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c31e9c6_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@344544e9_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33964e35_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c5e0472_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67abbb09_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@767f26bb_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d988a38_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bd3cf8a_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54dcfb01_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b0176d8_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e59b4fd_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e84e163_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ef295ad_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_125.FREQ_HZ" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_250_M120.FREQ_HZ" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_250_M120.PHASE" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_250_M150.FREQ_HZ" xilinx:valueSource="user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_250_M150.PHASE" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_250.FREQ_HZ" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_250_M45.FREQ_HZ" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_250_M45.PHASE" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.DAC_DATA_1.HAS_TKEEP" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.DAC_DATA_1.HAS_TLAST" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.DAC_DATA_1.HAS_TREADY" xilinx:valueSource="user"/>
@@ -612,9 +604,9 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3d4a062e"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3e73ebbf"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="67bb2144"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="66ae6bce"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fc94c922"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="a764f50f"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="819b4ed0"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>

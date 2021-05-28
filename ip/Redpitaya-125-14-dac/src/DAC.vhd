@@ -32,9 +32,9 @@ library UNISIM;
 use UNISIM.VComponents.all;
 
 entity DAC is
-    Port ( clk : in STD_LOGIC;
-           clk_dac_1 : in STD_LOGIC;
-           clk_dac_2 : in STD_LOGIC;
+    Port ( clk_125 : in STD_LOGIC;
+           clk_250 : in STD_LOGIC;
+           clk_250_m45 : in STD_LOGIC;
            resetn : in STD_LOGIC;
            dac_data_1_tdata : in STD_LOGIC_VECTOR (15 downto 0);
            dac_data_1_tvalid : in STD_LOGIC;
@@ -53,9 +53,9 @@ architecture Behavioral of DAC is
     signal  dac_data_2 :  STD_LOGIC_VECTOR (13 downto 0):= (13 => '0', others=>'1');
     begin
 
-        process(clk)
+        process(clk_125)
         begin
-            if rising_edge(clk) then
+            if rising_edge(clk_125) then
                 if resetn='0' then
                     dac_rst <= '1';
                     dac_data_1 <= (13 => '0', others=>'1');
@@ -86,10 +86,10 @@ architecture Behavioral of DAC is
             SRTYPE => "SYNC") -- Reset Type ("ASYNC" or "SYNC")
             port map (
             Q => dac_clk_o, -- 1-bit DDR output
-            C => clk_dac_1, -- 1-bit clock input
+            C => clk_250_m45, -- 1-bit clock input
             CE => '1', -- 1-bit clock enable input
-            D1 => '1', -- 1-bit data input (positive edge)
-            D2 => '0', -- 1-bit data input (negative edge)
+            D1 => '0', -- 1-bit data input (positive edge)
+            D2 => '1', -- 1-bit data input (negative edge)
             R => '0', -- 1-bit reset input
             S => '0' -- 1-bit set input
             );
@@ -101,10 +101,10 @@ architecture Behavioral of DAC is
             SRTYPE => "SYNC") -- Reset Type ("ASYNC" or "SYNC")
             port map (
             Q => dac_wrt_o, -- 1-bit DDR output
-            C => clk_dac_2, -- 1-bit clock input
+            C => clk_250, -- 1-bit clock input
             CE => '1', -- 1-bit clock enable input
-            D1 => '1', -- 1-bit data input (positive edge)
-            D2 => '0', -- 1-bit data input (negative edge)
+            D1 => '0', -- 1-bit data input (positive edge)
+            D2 => '1', -- 1-bit data input (negative edge)
             R => '0', -- 1-bit reset input
             S => '0' -- 1-bit set input
             );
@@ -116,10 +116,10 @@ architecture Behavioral of DAC is
             SRTYPE => "SYNC") -- Reset Type ("ASYNC" or "SYNC")
             port map (
             Q => dac_sel_o, -- 1-bit DDR output
-            C => clk, -- 1-bit clock input
+            C => clk_125, -- 1-bit clock input
             CE => '1', -- 1-bit clock enable input
-            D1 => '0', -- 1-bit data input (positive edge)
-            D2 => '1', -- 1-bit data input (negative edge)
+            D1 => '1', -- 1-bit data input (positive edge)
+            D2 => '0', -- 1-bit data input (negative edge)
             R => '0', -- 1-bit reset input
             S => '0' -- 1-bit set input
             );	
@@ -130,7 +130,7 @@ architecture Behavioral of DAC is
             SRTYPE => "SYNC") -- Reset Type ("ASYNC" or "SYNC")
             port map (
             Q => dac_rst_o, -- 1-bit DDR output
-            C => clk, -- 1-bit clock input
+            C => clk_125, -- 1-bit clock input
             CE => '1', -- 1-bit clock enable input
             D1 => dac_rst, -- 1-bit data input (positive edge)
             D2 => dac_rst, -- 1-bit data input (negative edge)
@@ -146,10 +146,10 @@ architecture Behavioral of DAC is
                 SRTYPE => "SYNC") -- Reset Type ("ASYNC" or "SYNC")
                 port map (
                 Q => dac_data_o(i), -- 1-bit DDR output
-                C => clk, -- 1-bit clock input
+                C => clk_125, -- 1-bit clock input
                 CE => '1', -- 1-bit clock enable input
-                D1 => dac_data_1(i), -- 1-bit data input (positive edge)
-                D2 => dac_data_2(i), -- 1-bit data input (negative edge)
+                D1 => dac_data_2(i), -- 1-bit data input (positive edge)
+                D2 => dac_data_1(i), -- 1-bit data input (negative edge)
                 R => '0', -- 1-bit reset input
                 S => '0' -- 1-bit set input
                 );	

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue May 25 08:49:27 2021
+--Date        : Thu May 27 17:07:36 2021
 --Host        : 5CD010B25T running 64-bit major release  (build 9200)
 --Command     : generate_target clk_bd.bd
 --Design      : clk_bd
@@ -17,8 +17,8 @@ entity clk_bd is
     adc_clk_n_i : in STD_LOGIC;
     adc_clk_p_i : in STD_LOGIC;
     clk_125 : out STD_LOGIC;
-    clk_250_m120 : out STD_LOGIC;
-    clk_250_m150 : out STD_LOGIC;
+    clk_250 : out STD_LOGIC;
+    clk_250_m45 : out STD_LOGIC;
     locked : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
@@ -33,9 +33,9 @@ architecture STRUCTURE of clk_bd is
     clk_in1_p : in STD_LOGIC;
     clk_in1_n : in STD_LOGIC;
     clk_125 : out STD_LOGIC;
-    clk_250_m150 : out STD_LOGIC;
-    clk_250_m120 : out STD_LOGIC;
-    locked : out STD_LOGIC
+    locked : out STD_LOGIC;
+    clk_250 : out STD_LOGIC;
+    clk_250_m45 : out STD_LOGIC
   );
   end component clk_bd_clk_wiz_0_0;
   component clk_bd_clockStabilization_0_0 is
@@ -46,31 +46,31 @@ architecture STRUCTURE of clk_bd is
   signal adc_clk_n_i_1 : STD_LOGIC;
   signal adc_clk_p_i_1 : STD_LOGIC;
   signal clk_wiz_0_clk_125 : STD_LOGIC;
-  signal clk_wiz_0_clk_250_m120 : STD_LOGIC;
-  signal clk_wiz_0_clk_250_m150 : STD_LOGIC;
+  signal clk_wiz_0_clk_250 : STD_LOGIC;
+  signal clk_wiz_0_clk_250_m45 : STD_LOGIC;
   signal clk_wiz_0_locked : STD_LOGIC;
   signal clockStabilization_0_adc_cdcs_o : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk_125 : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_125 CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of clk_125 : signal is "XIL_INTERFACENAME CLK.CLK_125, CLK_DOMAIN clk_bd_clk_wiz_0_0_clk_125, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of clk_250_m120 : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_250_M120 CLK";
-  attribute X_INTERFACE_PARAMETER of clk_250_m120 : signal is "XIL_INTERFACENAME CLK.CLK_250_M120, CLK_DOMAIN clk_bd_clk_wiz_0_0_clk_125, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE -120.0";
-  attribute X_INTERFACE_INFO of clk_250_m150 : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_250_M150 CLK";
-  attribute X_INTERFACE_PARAMETER of clk_250_m150 : signal is "XIL_INTERFACENAME CLK.CLK_250_M150, CLK_DOMAIN clk_bd_clk_wiz_0_0_clk_125, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE -150.0";
+  attribute X_INTERFACE_INFO of clk_250 : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_250 CLK";
+  attribute X_INTERFACE_PARAMETER of clk_250 : signal is "XIL_INTERFACENAME CLK.CLK_250, CLK_DOMAIN clk_bd_clk_wiz_0_0_clk_125, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_INFO of clk_250_m45 : signal is "xilinx.com:signal:clock:1.0 CLK.CLK_250_M45 CLK";
+  attribute X_INTERFACE_PARAMETER of clk_250_m45 : signal is "XIL_INTERFACENAME CLK.CLK_250_M45, CLK_DOMAIN clk_bd_clk_wiz_0_0_clk_125, FREQ_HZ 250000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE -45.0";
 begin
   adc_cdcs_o <= clockStabilization_0_adc_cdcs_o;
   adc_clk_n_i_1 <= adc_clk_n_i;
   adc_clk_p_i_1 <= adc_clk_p_i;
   clk_125 <= clk_wiz_0_clk_125;
-  clk_250_m120 <= clk_wiz_0_clk_250_m120;
-  clk_250_m150 <= clk_wiz_0_clk_250_m150;
+  clk_250 <= clk_wiz_0_clk_250;
+  clk_250_m45 <= clk_wiz_0_clk_250_m45;
   locked <= clk_wiz_0_locked;
 clk_wiz_0: component clk_bd_clk_wiz_0_0
      port map (
       clk_125 => clk_wiz_0_clk_125,
-      clk_250_m120 => clk_wiz_0_clk_250_m120,
-      clk_250_m150 => clk_wiz_0_clk_250_m150,
+      clk_250 => clk_wiz_0_clk_250,
+      clk_250_m45 => clk_wiz_0_clk_250_m45,
       clk_in1_n => adc_clk_n_i_1,
       clk_in1_p => adc_clk_p_i_1,
       locked => clk_wiz_0_locked

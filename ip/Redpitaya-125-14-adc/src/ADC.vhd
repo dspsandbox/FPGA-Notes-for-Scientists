@@ -32,7 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity ADC is
-    Port ( clk : in std_logic;
+    Port ( clk_125 : in std_logic;
            resetn : in  std_logic;
            adc_data_1_i : in std_logic_vector (13 downto 0);
            adc_data_2_i : in std_logic_vector (13 downto 0);
@@ -49,9 +49,9 @@ architecture Behavioral of ADC is
     signal valid : std_logic := '0';
     
     begin
-        process(clk)
+        process(clk_125)
             begin
-                if rising_edge(clk) then
+                if rising_edge(clk_125) then
                     if resetn = '0' then
                         data_1 <= (others => '0');   
                         data_2 <= (others => '0');   

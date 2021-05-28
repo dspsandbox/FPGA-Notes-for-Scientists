@@ -55,9 +55,9 @@ USE ieee.numeric_std.ALL;
 
 ENTITY dac_bd_DAC_0_0 IS
   PORT (
-    clk : IN STD_LOGIC;
-    clk_dac_1 : IN STD_LOGIC;
-    clk_dac_2 : IN STD_LOGIC;
+    clk_125 : IN STD_LOGIC;
+    clk_250 : IN STD_LOGIC;
+    clk_250_m45 : IN STD_LOGIC;
     resetn : IN STD_LOGIC;
     dac_data_1_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     dac_data_1_tvalid : IN STD_LOGIC;
@@ -76,9 +76,9 @@ ARCHITECTURE dac_bd_DAC_0_0_arch OF dac_bd_DAC_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF dac_bd_DAC_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT DAC IS
     PORT (
-      clk : IN STD_LOGIC;
-      clk_dac_1 : IN STD_LOGIC;
-      clk_dac_2 : IN STD_LOGIC;
+      clk_125 : IN STD_LOGIC;
+      clk_250 : IN STD_LOGIC;
+      clk_250_m45 : IN STD_LOGIC;
       resetn : IN STD_LOGIC;
       dac_data_1_tdata : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       dac_data_1_tvalid : IN STD_LOGIC;
@@ -102,21 +102,19 @@ ARCHITECTURE dac_bd_DAC_0_0_arch OF dac_bd_DAC_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF dac_data_2_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 dac_data_2 TVALID";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF dac_data_2_tdata: SIGNAL IS "XIL_INTERFACENAME dac_data_2, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF dac_data_2_tdata: SIGNAL IS "XIL_INTERFACENAME dac_data_2, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 125000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF dac_data_2_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 dac_data_2 TDATA";
   ATTRIBUTE X_INTERFACE_INFO OF dac_data_1_tvalid: SIGNAL IS "xilinx.com:interface:axis:1.0 dac_data_1 TVALID";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF dac_data_1_tdata: SIGNAL IS "XIL_INTERFACENAME dac_data_1, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF dac_data_1_tdata: SIGNAL IS "XIL_INTERFACENAME dac_data_1, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 125000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF dac_data_1_tdata: SIGNAL IS "xilinx.com:interface:axis:1.0 dac_data_1 TDATA";
   ATTRIBUTE X_INTERFACE_PARAMETER OF resetn: SIGNAL IS "XIL_INTERFACENAME resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF resetn: SIGNAL IS "xilinx.com:signal:reset:1.0 resetn RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF dac_data_1:dac_data_2, ASSOCIATED_RESET resetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : DAC
     PORT MAP (
-      clk => clk,
-      clk_dac_1 => clk_dac_1,
-      clk_dac_2 => clk_dac_2,
+      clk_125 => clk_125,
+      clk_250 => clk_250,
+      clk_250_m45 => clk_250_m45,
       resetn => resetn,
       dac_data_1_tdata => dac_data_1_tdata,
       dac_data_1_tvalid => dac_data_1_tvalid,

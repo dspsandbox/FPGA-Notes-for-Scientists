@@ -187,10 +187,6 @@
           <spirit:name>ASSOCIATED_BUSIF</spirit:name>
           <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_125.ASSOCIATED_BUSIF">adc_data_1:adc_data_2</spirit:value>
         </spirit:parameter>
-        <spirit:parameter>
-          <spirit:name>ASSOCIATED_RESET</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK_125.ASSOCIATED_RESET">resetn</spirit:value>
-        </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
   </spirit:busInterfaces>
@@ -208,7 +204,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>da77a7f3</spirit:value>
+            <spirit:value>e9143410</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -224,7 +220,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b9e35aaa</spirit:value>
+            <spirit:value>092d1459</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -389,12 +385,8 @@
       <spirit:file>
         <spirit:name>src/adc_bd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_a3046d52</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_81b010ef</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -413,10 +405,6 @@
         <spirit:name>sim/adc_bd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -446,27 +434,41 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Redpitaya-125-14-adc</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-05-24T12:15:15Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-05-28T06:17:51Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e3a063c_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fc58279_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@499a2921_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@44754a75_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@47402061_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@23d1fd25_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@edd8cff_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@618a5a8b_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ff51d6c_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ba1cfb9_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a020e02_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@13999d3b_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b2d324a_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@375439b0_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cdb6078_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e209c6e_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f4ad8ca_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@31e99213_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46a8735_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38a9eb2d_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71f12ecf_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4818b364_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b2ae19c_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50a62ef3_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d57eeb7_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@db7770d_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3df9a91f_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dd51fa3_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c102b36_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ef8f57b_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c35a689_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@122a79ad_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cb6be03_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@512c6cb1_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33d3e622_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dad36cd_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6346c8eb_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@df96217_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e03124d_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aed00c1_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b6f07eb_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fbe1b89_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e93386b_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4587df4f_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c71ac95_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31881025_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f43b3ad_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54d83f15_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25d04954_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73137824_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-adc</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_DATA_1.HAS_TKEEP" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
@@ -492,8 +494,8 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="82281a37"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="318c7e6d"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="8cad17bf"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="68c64d7e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="40dec393"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="cade33ac"/>
     </xilinx:packagingInfo>
