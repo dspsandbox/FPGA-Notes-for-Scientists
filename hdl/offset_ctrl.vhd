@@ -39,8 +39,11 @@ begin
         end if;
     end process;
     
+    data_o_tvalid <= valid_reg;
+
     -- Overflow protection:
     data_o_tdata <= (data_width - 1 => sign_data_reg, others => not(sign_data_reg) ) when (sign_data_reg = sign_offset_reg) and (sign_data_reg /= sum_reg(data_width - 1)) else
                       std_logic_vector(sum_reg);
+
                       
 end Behavioral;
