@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>DSPsandbox</spirit:vendor>
-  <spirit:library>Redpitaya-125-14</spirit:library>
+  <spirit:library>FPGA-Notes-for-Scientist</spirit:library>
   <spirit:name>dac</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
@@ -70,6 +70,13 @@
           <spirit:value spirit:id="BUSIFPARAM_VALUE.DAC_DATA_1.LAYERED_METADATA">undef</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
+      <spirit:vendorExtensions>
+        <xilinx:busInterfaceInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.dac_data_1" xilinx:dependency="$Ch1_Enabled = true">true</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:busInterfaceInfo>
+      </spirit:vendorExtensions>
     </spirit:busInterface>
     <spirit:busInterface>
       <spirit:name>dac_data_2</spirit:name>
@@ -136,6 +143,13 @@
           <spirit:value spirit:id="BUSIFPARAM_VALUE.DAC_DATA_2.LAYERED_METADATA">undef</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
+      <spirit:vendorExtensions>
+        <xilinx:busInterfaceInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.dac_data_2" xilinx:dependency="$Ch2_Enabled = true">true</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:busInterfaceInfo>
+      </spirit:vendorExtensions>
     </spirit:busInterface>
     <spirit:busInterface>
       <spirit:name>RST.RESETN</spirit:name>
@@ -260,7 +274,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>22d750e1</spirit:value>
+            <spirit:value>cd05ec00</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -276,7 +290,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ac48efa3</spirit:value>
+            <spirit:value>791bb67c</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -290,7 +304,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f64a5dae</spirit:value>
+            <spirit:value>c06896db</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -502,7 +516,7 @@
       <spirit:file>
         <spirit:name>src/dac_bd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f3f74b12</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_45b7071f</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -529,7 +543,7 @@
       <spirit:file>
         <spirit:name>xgui/dac_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_c06896db</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -540,6 +554,14 @@
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">dac_bd_v1_0</spirit:value>
     </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Ch1_Enabled</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Ch1_Enabled">true</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Ch2_Enabled</spirit:name>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.Ch2_Enabled">true</spirit:value>
+    </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
@@ -547,12 +569,12 @@
         <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
       </xilinx:supportedFamilies>
       <xilinx:taxonomies>
-        <xilinx:taxonomy>/Redpitaya-125-14</xilinx:taxonomy>
+        <xilinx:taxonomy>/FPGA-Notes-for-Scientist</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>Redpitaya-125-14-dac</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-05-28T06:21:51Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-10-11T09:32:19Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@267050f4_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@60af67fb_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
@@ -576,6 +598,28 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1e59b4fd_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@e84e163_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7ef295ad_ARCHIVE_LOCATION">c:/Users/Pau/Documents/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bae2e9_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1363704c_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5575e16c_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63880a4e_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b49f253_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57d1d5a_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68fa04c5_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54b8d25e_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52ff6fb3_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6699783b_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46a0c50_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5991fcd4_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78fbdbdf_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6886a51f_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e24fe67_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bc0a94b_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ac4f25_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d0eba56_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35f19fe3_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@203573b7_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20aad0ef_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@532b6434_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/Redpitaya-125-14-dac</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLK.CLK_125.FREQ_HZ" xilinx:valueSource="user"/>
@@ -603,11 +647,11 @@
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="66ae6bce"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fc94c922"/>
+      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="4f46764d"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e297c3ce"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a764f50f"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="819b4ed0"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="01282cfc"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
