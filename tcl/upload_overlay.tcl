@@ -6,7 +6,7 @@ set user xilinx
 #############################
 cd [get_property DIRECTORY [current_project]]
 set projName [get_property NAME [current_project]]
-set topDesignName [string trim [get_property top [current_fileset]] "*_wrapper"]
+set topDesignName [string map {"_wrapper" ""} [get_property top [current_fileset]]]
 set overlay_dir overlay/$projName
 file delete -force $overlay_dir
 file mkdir $overlay_dir
