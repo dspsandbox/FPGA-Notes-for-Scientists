@@ -1,7 +1,7 @@
 #############################
 # PARAMETERS
 #############################
-set ip 192.168.1.99
+set ip 192.168.2.99
 set user xilinx
 #############################
 cd [get_property DIRECTORY [current_project]]
