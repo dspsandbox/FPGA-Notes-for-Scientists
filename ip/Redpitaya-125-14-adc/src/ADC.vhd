@@ -66,11 +66,11 @@ architecture Behavioral of ADC is
 
         adc_data_1_tdata(15) <= data_1(13);
         adc_data_1_tdata(14 downto 2) <= not data_1(12 downto 0);
-        adc_data_1_tdata(1 downto 0) <=  (others => (not data_1(0)));
+        adc_data_1_tdata(1 downto 0) <=  (others => '0');
         
         adc_data_2_tdata(15) <= data_2(13);
         adc_data_2_tdata(14 downto 2) <= not data_2(12 downto 0);
-        adc_data_2_tdata(1 downto 0) <= (others => (not data_2(0)));
+        adc_data_2_tdata(1 downto 0) <= (others => '0');
         
         adc_data_1_tvalid <= valid;
         adc_data_2_tvalid <= valid;
