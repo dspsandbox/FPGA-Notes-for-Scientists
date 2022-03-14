@@ -12,7 +12,7 @@ architecture tb of counter_tb is
     signal counter_o : std_logic_vector (31 downto 0); 
 begin
     -- connecting testbench signals with counter.vhd
-    inst : entity work.counter port map (clk => clk, resetn => resetn, incr_i => incr_i, counter_o => counter_o);
+    counter_instance : entity work.counter port map (clk => clk, resetn => resetn, incr_i => incr_i, counter_o => counter_o);
 
     -- clock (100MHz)
     process 
