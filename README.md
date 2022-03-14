@@ -9,6 +9,7 @@ This repository is a collection of hands-on FPGA programming projects for scient
 * [Redpitaya & Zynq architecture](../../wiki/Redpitaya-&-Zynq-architecture)
 * Tutorials:
    * [LED blink](../../wiki/LED-blink)
+   * [Behavioral simulation](../../wiki/Behavioral-simulation)
    * [Analog echo](../../wiki/Analog-echo)
    * [DMA transfer](../../wiki/DMA-transfer)
 
