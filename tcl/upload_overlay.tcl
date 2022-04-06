@@ -13,6 +13,6 @@ file mkdir $overlay_dir
 puts $overlay_dir
 file copy -force [glob $projName.runs/impl_1/*.bit] $overlay_dir/$projName.bit
 file copy -force [glob $projName.*/sources_1/bd/$topDesignName/hw_handoff/*.hwh] $overlay_dir/$projName.hwh
-file copy -force [glob $projName.*/sources_1/bd/$topDesignName/hw_handoff/*.tcl] $overlay_dir/$projName.tcl
+write_bd_tcl -force $overlay_dir/$projName.tcl
 exec scp -r $overlay_dir $user@$ip:/home/xilinx/pynq/overlays
 puts "\nOverlay \"$projName\" successfully uploaded to: \n$user@$ip:/home/xilinx/pynq/overlays/$projName"
