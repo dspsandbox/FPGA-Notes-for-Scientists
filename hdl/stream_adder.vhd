@@ -8,7 +8,6 @@ entity stream_adder is
     Generic (data_width : integer := 16);
     Port ( clk : in STD_LOGIC;
            resetn : in STD_LOGIC;
-           amplitude : in STD_LOGIC_VECTOR (data_width - 1 downto 0);
            data_0_i_tdata : in STD_LOGIC_VECTOR (data_width - 1 downto 0);
            data_0_i_tvalid : in STD_LOGIC;
            data_1_i_tdata : in STD_LOGIC_VECTOR (data_width - 1 downto 0);
