@@ -17,8 +17,6 @@ end amplitude_ctrl;
 
 architecture Behavioral of amplitude_ctrl is
     signal mult_reg : signed(2*data_width - 1 downto 0) := (others => '0');
-    signal sign_data_reg : std_logic := '0';
-    signal sign_ampl_reg : std_logic := '0';
     signal valid_reg : std_logic := '0';
     
 begin
@@ -27,13 +25,9 @@ begin
         if rising_edge(clk) then
             if resetn = '0' then
                 mult_reg <= (others => '0');
-                sign_data_reg <= '0';
-                sign_ampl_reg <= '0';
                 valid_reg <= '0';
             else
                 mult_reg <= signed(data_i_tdata) * signed(amplitude);
-                sign_data_reg <= data_i_tdata(data_width - 1);
-                sign_ampl_reg <= amplitude(data_width - 1);
                 valid_reg <= data_i_tvalid;
             end if;
         end if;
