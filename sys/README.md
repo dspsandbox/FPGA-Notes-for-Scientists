@@ -39,7 +39,7 @@
     ```
     sudo vi /etc/wireguard/wg0.conf
     ```
-* Copy into it the content of [resources/wg/client/wg0.conf](resources/wg/client/wg0.conf). Change Enpoint IP (X.X.X.X) with the \<publicIP\> of EC-2 instance:
+* Copy into it the content of [resources/wg/client/wg0.conf](resources/wg/client/wg0.conf). Change Enpoint IP (X.X.X.X) with the \<publicIP\> of EC-2 instance.
 
 * Enable and restart Wireguard service:
     ```
