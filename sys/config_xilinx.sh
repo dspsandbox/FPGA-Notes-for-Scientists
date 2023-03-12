@@ -7,6 +7,9 @@ NSTALLATION_DIR=~/Xilinx
 mkdir -p /tmp/xilinx_download
 cd /tmp/xilinx_download
 wget --no-check-certificate -O installer.tar.gz $XILINX_DOWNLOAD_URL
+tar -xf installer.tar.gz
 cd Xilinx_Unified_*
 ./xsetup --agree 3rdPartyEULA,XilinxEULA --batch Install --edition "Vivado ML Standard" --product "Vivado" --location $XILINX_INSTALLATION_DIR
 
+#Return to script dir
+cd "$(dirname "$BASH_SOURCE")"
