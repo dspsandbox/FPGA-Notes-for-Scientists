@@ -8,6 +8,9 @@ sudo apt update -y
 sudo apt install -y ubuntu-desktop
 source resources/xrdp/xrdp-installer-*
 
+#Firefox
+sudo apt install firefox
+
 #Update password
 echo "$LNX_USER:$LNX_PWD" | sudo chpasswd
 
