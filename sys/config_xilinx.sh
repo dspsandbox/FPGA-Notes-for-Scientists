@@ -1,7 +1,7 @@
 #!/bin/bash
 XILINX_DOWNLOAD_URL="https://onedrive.live.com/download?cid=D86684562D90EDDE&resid=D86684562D90EDDE%21141&authkey=AH4ZBCapnqsbpQc"
 XILINX_I#!/bin/bash
-NSTALLATION_DIR=/home/ubuntu/Xilinx
+NSTALLATION_DIR=~/Xilinx
 
 #Vivado installation
 mkdir -p /tmp/xilinx_download
