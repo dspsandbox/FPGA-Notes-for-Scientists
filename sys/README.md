@@ -21,6 +21,7 @@
     ```
 * Execute scripts:
     ```
+    cd FPGA-Notes-for-Scientists/sys
     source config_xrdp.sh
     source config_display.sh
     source config_wg.sh
