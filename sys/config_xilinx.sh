@@ -13,6 +13,8 @@ tar -xf installer.tar.gz
 rm installer.tar.gz 
 cd Xilinx_Unified_*
 ./xsetup --agree 3rdPartyEULA,XilinxEULA --batch Install --edition "Vivado ML Standard" --product "Vivado" --location $XILINX_INSTALLATION_DIR
+#Remove XIC
+rm -r XILINX_INSTALLATION_DIR/xic
 #Remove desktop icons
 rm  ~/Desktop/*.desktop
 #Return to script dir
