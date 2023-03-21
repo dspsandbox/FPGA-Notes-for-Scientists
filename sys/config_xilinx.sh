@@ -19,3 +19,5 @@ rm -r $XILINX_INSTALLATION_DIR/xic
 rm  ~/Desktop/*.desktop
 #Return to script dir
 cd "$(dirname "$BASH_SOURCE")"
+#Replace path for LD_LIBRARY_PATH in upload_overlay.tcl (resolve OpenSSL error)
+sed -i '/^exec/ {s#^#set ::env(LD_LIBRARY_PATH) "/usr/bin/openssl"\n#}' ../tcl/upload_overlay.tcl 
