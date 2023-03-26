@@ -5,20 +5,20 @@ use IEEE.NUMERIC_STD.ALL;
 
 
 entity stream_multiplier is
-    Generic (data_width : integer := 16);
+    Generic (DATA_WIDTH : integer := 16);
     Port ( clk : in STD_LOGIC;
            resetn : in STD_LOGIC;
-           amplitude : in STD_LOGIC_VECTOR (data_width - 1 downto 0);
-           data_0_i_tdata : in STD_LOGIC_VECTOR (data_width - 1 downto 0);
+           amplitude : in STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
+           data_0_i_tdata : in STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
            data_0_i_tvalid : in STD_LOGIC;
-           data_1_i_tdata : in STD_LOGIC_VECTOR (data_width - 1 downto 0);
+           data_1_i_tdata : in STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
            data_1_i_tvalid : in STD_LOGIC;
-           data_o_tdata : out STD_LOGIC_VECTOR (data_width - 1 downto 0);
+           data_o_tdata : out STD_LOGIC_VECTOR (DATA_WIDTH - 1 downto 0);
            data_o_tvalid : out STD_LOGIC);
 end stream_multiplier;
 
 architecture Behavioral of stream_multiplier is
-    signal mult_reg : signed(2*data_width - 1 downto 0) := (others => '0');
+    signal mult_reg : signed(2*DATA_WIDTH - 1 downto 0) := (others => '0');
     signal valid_reg : std_logic := '0';
     
     begin
@@ -36,10 +36,7 @@ architecture Behavioral of stream_multiplier is
         end process;
         
         data_o_tvalid <= valid_reg;
-
-        -- Overflow protection:
-        data_o_tdata <= (data_width - 1 => '0', others => '1' ) when mult_reg(2 * data_width - 1 downto 2 * data_width - 2) = "01" else
-                        std_logic_vector(mult_reg(2 * data_width - 2 downto data_width - 1));
+        data_o_tdata <= std_logic_vector(mult_reg(2 * DATA_WIDTH - 2 downto DATA_WIDTH - 1));
 
                         
 end Behavioral;

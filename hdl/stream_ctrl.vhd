@@ -5,15 +5,15 @@ use IEEE.NUMERIC_STD.ALL;
 
 
 entity stream_ctrl is
-    Generic( data_width : integer := 16);
+    Generic( DATA_WIDTH : integer := 16);
     Port ( clk : in STD_LOGIC;
            resetn : in STD_LOGIC;
            samples : in STD_LOGIC_VECTOR(31 downto 0);
            trig : in STD_LOGIC;
-           stream_i_tdata : in STD_LOGIC_VECTOR(data_width - 1 downto 0);
+           stream_i_tdata : in STD_LOGIC_VECTOR(DATA_WIDTH - 1 downto 0);
            stream_i_tvalid : in STD_LOGIC;
            stream_i_tready : out STD_LOGIC;           
-           stream_o_tdata: out STD_LOGIC_VECTOR(data_width - 1 downto 0);
+           stream_o_tdata: out STD_LOGIC_VECTOR(DATA_WIDTH - 1 downto 0);
            stream_o_tvalid : out STD_LOGIC;
            stream_o_tlast : out STD_LOGIC;
            stream_o_tready : in STD_LOGIC           
@@ -34,6 +34,7 @@ architecture Behavioral of stream_ctrl is
                     if resetn='0' then
                         state <= IDLE;
                         counter <= (others => '0'); 
+                        trig_old <= 0;
                     else
                         
                         case state is 

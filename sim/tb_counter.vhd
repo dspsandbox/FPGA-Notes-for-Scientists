@@ -3,15 +3,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 
-entity counter_tb is
-end counter_tb;
+entity tb_counter is
+end tb_counter;
 
-architecture tb of counter_tb is
+architecture tb of tb_counter is
     signal clk, resetn : std_logic;
     signal incr_i : std_logic_vector (31 downto 0); 
     signal counter_o : std_logic_vector (31 downto 0); 
 begin
-    -- connecting testbench signals with counter.vhd
+    -- connecting testbench to counter.v instance
     counter_instance : entity work.counter port map (clk => clk, resetn => resetn, incr_i => incr_i, counter_o => counter_o);
 
     -- clock (100MHz)
