@@ -1,5 +1,5 @@
 module stream_multiplier #(
-    paramater DATA_WIDTH = 16
+    parameter DATA_WIDTH = 16
 )(
     input clk,
     input resetn,
@@ -7,7 +7,7 @@ module stream_multiplier #(
     input data_0_i_tvalid,
     input signed [DATA_WIDTH - 1 : 0] data_1_i_tdata,
     input data_1_i_tvalid,
-    output signed reg [DATA_WIDTH - 1 : 0] data_o_tdata,
+    output signed [DATA_WIDTH - 1 : 0] data_o_tdata,
     output reg data_o_tvalid
 );
 

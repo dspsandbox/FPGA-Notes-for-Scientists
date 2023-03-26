@@ -6,7 +6,7 @@ module offset_ctrl #(
     input signed [DATA_WIDTH - 1 : 0] offset,
     input signed [DATA_WIDTH - 1 : 0] data_i_tdata,
     input data_i_tvalid,
-    output signed reg [DATA_WIDTH - 1 : 0] data_o_tdata,
+    output reg signed [DATA_WIDTH - 1 : 0] data_o_tdata,
     output reg data_o_tvalid
 );
 
