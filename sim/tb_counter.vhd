@@ -26,6 +26,13 @@ begin
     -- main simulation
     process 
     begin
+        -- reset
+        resetn <= '0'; 
+        incr_i <= (others => '0');
+        
+        -- run 50ns
+        wait for 50ns;
+
         -- Set counter increment = 2
         incr_i <= std_logic_vector(to_unsigned(2, incr_i'length));
         

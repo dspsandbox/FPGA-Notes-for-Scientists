@@ -11,7 +11,6 @@ module counter (
         end else begin
             counter_o <= counter_o + incr_i;
         end
-        
     end
 
 endmodule

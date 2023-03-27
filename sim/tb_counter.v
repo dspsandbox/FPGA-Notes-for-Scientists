@@ -3,7 +3,7 @@ module tb_counter ();
     reg clk;
     reg resetn;
     reg [31 : 0] incr_i;
-    wire counter_o;  
+    wire [31 : 0] counter_o;  
 
     // connecting testbench to counter.v instance
     counter counter_instance(   
@@ -23,6 +23,13 @@ module tb_counter ();
     
     //main simulation
     initial begin
+        //reset core
+        resetn <= 0;
+        incr_i <= 0;
+
+        //run 50ns
+        #50;
+
         //set counter increment = 2    
         incr_i <= 2;
 
