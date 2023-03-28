@@ -28,9 +28,9 @@ module stream_dec #(
 
     assign stream_o_tdata = stream_i_tdata;
 
-    assign stream_o_tvalid <= (counter == 1) ? stream_i_tvalid : 0;
+    assign stream_o_tvalid = (counter == 1) ? stream_i_tvalid : 0;
                     
-    assign stream_i_tready <= (counter == 1) ? stream_o_tready : 0;
+    assign stream_i_tready = (counter == 1) ? stream_o_tready : 0;
 
 endmodule;
 
