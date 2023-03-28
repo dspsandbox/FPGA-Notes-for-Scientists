@@ -20,12 +20,12 @@ module dds_wrapper(
         .m_axis_data_tdata(dds_o)
     );
           
-    assign dds_i [31 : 0] = phase_inc;
+    assign dds_i[31 : 0] = phase_inc;
     assign dds_i[63 : 32] = phase_off;
     assign dds_i[64] = phase_clr;
     assign dds_i[71 : 65] = 0;
     
-    assign cos_tdata = dds_[15 : 0];
+    assign cos_tdata = dds_o[15 : 0];
     assign cos_tvalid = 1;
     assign sin_tdata = dds_o[31 : 16];
     assign sin_tvalid = 1;
