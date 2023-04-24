@@ -1,8 +1,8 @@
 module stream_ctrl #(
-    paramater DATA_WIDTH = 16
+    parameter DATA_WIDTH = 16
 )(
     input clk,
-    input reset,
+    input resetn,
     input [31 : 0] samples,
     input trig, 
     input [DATA_WIDTH - 1 : 0] stream_i_tdata,
