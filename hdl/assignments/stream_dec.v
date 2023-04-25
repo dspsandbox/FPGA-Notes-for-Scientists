@@ -32,5 +32,5 @@ module stream_dec #(
                     
     assign stream_i_tready = (counter == 1) ? stream_o_tready : 0;
 
-endmodule;
+endmodule
 

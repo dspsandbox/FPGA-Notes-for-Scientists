@@ -55,6 +55,6 @@ module stream_ctrl #(
 
     assign stream_o_tlast = ((state == RUNNING) && (counter == (samples - 1))) ? 1 : 0;
 
-endmodule;
+endmodule
 
 

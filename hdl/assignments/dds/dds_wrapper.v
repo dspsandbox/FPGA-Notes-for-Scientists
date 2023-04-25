@@ -29,4 +29,4 @@ module dds_wrapper(
     assign cos_tvalid = 1;
     assign sin_tdata = dds_o[31 : 16];
     assign sin_tvalid = 1;
-endmodule;
+endmodule
