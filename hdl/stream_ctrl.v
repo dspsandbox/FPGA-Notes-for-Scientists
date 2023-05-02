@@ -44,6 +44,8 @@ module stream_ctrl #(
                     end
                 end
             endcase
+
+            trig_old <= trig;
         end
     end
 
