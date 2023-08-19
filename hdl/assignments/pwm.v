@@ -1,4 +1,4 @@
-module counter (
+module pwm (
     input clk,
     input resetn,
     input [31 : 0] incr_i,
