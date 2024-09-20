@@ -1,6 +1,6 @@
 #!/bin/bash
 LNX_USER=ubuntu
-LNX_PWD=topsecret
+LNX_PWD=top_secret
 
 #XRDP Server
 sudo apt update -y
