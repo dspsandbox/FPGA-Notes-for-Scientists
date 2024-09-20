@@ -5,6 +5,7 @@ LNX_PWD=helloworld
 #XRDP Server
 sudo apt update -y
 sudo apt install -y ubuntu-desktop
+sudo dpkg --configure -a
 source resources/xrdp/xrdp-installer-*
 
 #Firefox
