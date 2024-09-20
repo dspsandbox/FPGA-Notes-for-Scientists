@@ -157,18 +157,18 @@ then
     cnt=$(ls /usr/share/xsessions |  wc -l)
     echo $cnt 
 
-    # Try to Detect automatically Desktop Interface. If multiple options present, create a menu
-    if [ "$cnt" -gt "1" ]
-    then 
-        PS3='Please specify which DE you are using...: '
+    # Try to Detect automatically Desktop Interface. If multiple options present, select option 2 automatically
+    if [ "$cnt" -gt "1" ]; then 
         desk=($(ls /usr/share/xsessions | cut -d "." -f 1))
-    
-        select menu in "${desk[@]}";
-        do
-        echo -e "\nyou picked $menu ($REPLY)"
-        break;
-        
-        done         
+
+        # Automatically selecting option 2) ubuntu (index 1, as arrays are 0-indexed in bash)
+        if [ "${#desk[@]}" -ge 2 ]; then
+            menu=${desk[1]}
+            echo -e "\nAutomatically selected option 2: $menu"
+        else
+            echo "Less than 2 options available."
+        fi
+
     else
         desk=($(ls /usr/share/xsessions | cut -d "." -f 1))
         menu=$desk
