@@ -23,9 +23,9 @@ curl 'https://my.microsoftpersonalcontent.com/personal/d86684562d90edde/_layouts
   -H 'sec-fetch-site: cross-site' \
   -H 'sec-fetch-user: ?1' \
   -H 'upgrade-insecure-requests: 1' \
-  -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
+  -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36' \
   --output installer.tar.gz
-  
+
 tar -xf installer.tar.gz
 rm installer.tar.gz 
 cd Xilinx_Unified_*
