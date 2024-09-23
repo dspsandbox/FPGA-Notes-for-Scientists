@@ -1,5 +1,5 @@
 #!/bin/bash
-XILINX_DOWNLOAD_URL="https://onedrive.live.com/download?cid=D86684562D90EDDE&resid=D86684562D90EDDE%21141&authkey=AH4ZBCapnqsbpQc"
+XILINX_DOWNLOAD_URL="https://1drv.ms/u/c/d86684562d90edde/Ed7tkC1WhGYggNiNAAAAAAABy0p0ov9c5-kpvE3wfbGibw?e=3ht5Zm&download=1"
 XILINX_INSTALLATION_DIR=~/Xilinx
 
 #Prerequisites (see https://support.xilinx.com/s/article/63794?language=en_US) and gcc compiler for simulation
