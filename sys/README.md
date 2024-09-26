@@ -25,8 +25,7 @@
     source config_xrdp.sh
     source config_display.sh
     source config_wg.sh
-    source config_xilinx_0.sh
-    source config_xilinx_1.sh
+    source config_xilinx.sh
     ```
 
 ### Configure FPGA
