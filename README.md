@@ -5,7 +5,8 @@ This repository is a collection of hands-on FPGA programming projects for scient
 
 ## Table of contents
 * [Introduction](../../wiki/Introduction)
-* [Setting up your system](../../wiki/Setting-up-your-system)
+* [Setting up your system (Local)](../../wiki/Setting-up-your-system)
+* [Setting up your system (Remote Development Servers)](../../wiki/Setting-up-your-system-(Remote-Development-Servers))
 * [Redpitaya & Zynq architecture](../../wiki/Redpitaya-&-Zynq-architecture)
 * Tutorials:
    * [LED blink](../../wiki/LED-blink)
