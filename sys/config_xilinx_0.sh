@@ -24,3 +24,6 @@ rm installer.tar.gz
 cd Vivado_*
 ./xsetup --agree 3rdPartyEULA,XilinxEULA --batch Install --edition "Vivado ML Standard" --product "Vivado" --location $XILINX_INSTALLATION_DIR
 
+#Remove tmp folder
+cd /.
+rm -r $XILINX_DOWNLOAD_DIR
