@@ -8,6 +8,7 @@ XILINX_INSTALLATION_DIR=~/Xilinx
 
 
 echo "dash dash/sh boolean true" | sudo debconf-set-selections
+sudo apt -y remove needrestart
 sudo dpkg --add-architecture i386
 sudo apt-get install -y gparted xinetd gawk gcc net-tools ncurses-dev openssl libssl-dev flex bison xterm autoconf libtool texinfo zlib1g-dev 
 sudo apt-get install -y iproute2 make libncurses5-dev tftpd libselinux1 wget diffstat chrpath socat tar unzip gzip python tofrodos lsb libftdi1 libftdi1-2
