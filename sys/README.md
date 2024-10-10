@@ -1,8 +1,8 @@
 # Remote Development System (AWS EC-2 instance & FPGA)
 ### EC-2 Instance Specifications
 * AMI: Ubuntu 22.04 Server LTS
-* Type: c5.xlarge
-* Memory: 200GB SSD
+* Type: c5.2xlarge
+* Memory: 100GB SSD
 * Use elastic IP to get static public IP address
 * Networking inbound/outbound rules: 
     * Enable all TCP
