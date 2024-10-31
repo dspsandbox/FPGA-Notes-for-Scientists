@@ -2,7 +2,7 @@ module stream_dec #(
     parameter DATA_WIDTH = 16
 )(
     input clk,
-    input reset,
+    input resetn,
     input [31 : 0] dec,
     input [DATA_WIDTH - 1 : 0] stream_i_tdata,
     input stream_i_tvalid,
