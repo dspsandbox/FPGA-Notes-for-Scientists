@@ -3,6 +3,15 @@ set project_name [current_project]
 set project_path [file normalize [get_property directory $project_name]/..]
 set output_path "${project_path}/project.tcl"
 
+# Remove top module checkpoints
+set top_name [get_property top [current_fileset]]
+set filter_expr "NAME =~ \"*${top_name}.dcp\""
+set dcp_files [get_files -filter $filter_expr]
+foreach dcp_file $dcp_files {
+    remove_files $dcp_file
+}
+
+
 #Write project
 write_project_tcl -force $output_path
 
