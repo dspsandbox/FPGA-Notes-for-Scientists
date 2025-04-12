@@ -179,4 +179,4 @@
 
 #### Clock constraints                                         
 #create_clock -period 8.000 -name adc_clk_p_i [get_ports adc_clk_p_i]
-#set_input_delay -clock adc_clk_p_i 3.400 [get_ports adc_data_*_i[*]] 
+#set_input_delay -clock adc_clk_p_i 6.000 [get_ports adc_data_*_i[*]] 
