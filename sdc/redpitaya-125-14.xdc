@@ -1,5 +1,5 @@
 ##############################################################################
-# REDPITAYA-125-14 Zynq7010 CONSTRAINTS FILE                                          
+# REDPITAYA-125-14 CONSTRAINTS FILE                                          
 #                                                                            
 # Simplified version of the offical .xdc file in:                           
 # https://github.com/RedPitaya/RedPitaya-FPGA/tree/master/sdc/red_pitaya.xdc  

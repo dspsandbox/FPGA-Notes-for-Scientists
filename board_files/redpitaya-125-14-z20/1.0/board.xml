@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<board schema_version="2.0"  vendor="redpitaya.com" name="redpitaya-125-14-z20" display_name="Redpitaya-125-14-z20" preset_file="preset.xml" >
+ <file_version>1.0</file_version>
+ <description>Redpitaya-125-14-z20</description>
+ <components>
+   <component name="part0" display_name="Redpitaya-125-14-z20" type="fpga" part_name="xc7z020clg400-1" vendor="xilinx.com">
+     <interfaces>
+       <interface mode="master" name="ps7_fixedio" type="xilinx.com:display_processing_system7:fixedio_rtl:1.0" of_component="ps7_fixedio" preset_proc="ps7_preset"> 
+       </interface>
+     </interfaces>
+   </component>
+   <component name="ps7_fixedio" display_name="ps7_fixedio" type="chip" sub_type="fixed_io" major_group=""/>
+ </components>
+</board>
