@@ -34,7 +34,7 @@ architecture Behavioral of stream_ctrl is
                     if resetn='0' then
                         state <= IDLE;
                         counter <= (others => '0'); 
-                        trig_old <= 0;
+                        trig_old <= '0';
                     else
                         
                         case state is 
