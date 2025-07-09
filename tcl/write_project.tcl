@@ -13,7 +13,7 @@ foreach dcp_file $dcp_files {
 
 
 #Write project
-write_project_tcl -force $output_path
+write_project_tcl -force -no_ip_version $output_path
 
 #Convert absolute to relative paths
 set fp [open  $output_path r]
