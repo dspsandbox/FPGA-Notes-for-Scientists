@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <spirit:vendor>IpLibPauGomez</spirit:vendor>
-  <spirit:library>IpLibPauGomez</spirit:library>
+  <spirit:vendor>DSPsandbox</spirit:vendor>
+  <spirit:library>FPGA-Notes-for-Scientists</spirit:library>
   <spirit:name>cic_ctrl</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
@@ -243,9 +243,11 @@
   <spirit:memoryMaps>
     <spirit:memoryMap>
       <spirit:name>s_axi</spirit:name>
+      <spirit:displayName>s_axi</spirit:displayName>
       <spirit:addressBlock>
         <spirit:name>reg0</spirit:name>
-        <spirit:baseAddress spirit:format="bitString" spirit:resolve="user" spirit:bitStringLength="32">0</spirit:baseAddress>
+        <spirit:displayName>reg0</spirit:displayName>
+        <spirit:baseAddress spirit:format="bitString" spirit:bitStringLength="1">0x0</spirit:baseAddress>
         <spirit:range spirit:format="long" spirit:minimum="4096" spirit:rangeType="long">4096</spirit:range>
         <spirit:width spirit:format="long" spirit:resolve="dependent">32</spirit:width>
         <spirit:usage>register</spirit:usage>
@@ -261,7 +263,7 @@
         <spirit:language>Verilog</spirit:language>
         <spirit:modelName>cic_ctrl</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagesynthesis_IpLibPauGomez_IpLibPauGomez_reg_bank_1_0__ref_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_anylanguagesynthesis_DSPsandbox_FPGA_Notes_for_Scientists_reg_bank_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
@@ -269,7 +271,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dfdf78a3</spirit:value>
+            <spirit:value>7ae7278d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -280,7 +282,7 @@
         <spirit:language>Verilog</spirit:language>
         <spirit:modelName>cic_ctrl</spirit:modelName>
         <spirit:fileSetRef>
-          <spirit:localName>xilinx_anylanguagebehavioralsimulation_IpLibPauGomez_IpLibPauGomez_reg_bank_1_0__ref_view_fileset</spirit:localName>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_DSPsandbox_FPGA_Notes_for_Scientists_reg_bank_1_0__ref_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
@@ -288,7 +290,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dfdf78a3</spirit:value>
+            <spirit:value>7ae7278d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -704,22 +706,21 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/reg_bank_0/reg_bank_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_reg_bank_instance/reg_bank_0</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/cic_ctrl.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_b32fb437</spirit:userFileType>
       </spirit:file>
+      <spirit:file>
+        <spirit:name>src/reg_bank_0/reg_bank_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_reg_bank_instance</spirit:userFileType>
+      </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagesynthesis_IpLibPauGomez_IpLibPauGomez_reg_bank_1_0__ref_view_fileset</spirit:name>
+      <spirit:name>xilinx_anylanguagesynthesis_DSPsandbox_FPGA_Notes_for_Scientists_reg_bank_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="IpLibPauGomez" xilinx:library="IpLibPauGomez" xilinx:name="reg_bank" xilinx:version="1.0">
+          <xilinx:componentRef xilinx:vendor="DSPsandbox" xilinx:library="FPGA-Notes-for-Scientists" xilinx:name="reg_bank" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -728,21 +729,20 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/reg_bank_0/reg_bank_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-        <spirit:userFileType>CELL_NAME_reg_bank_instance/reg_bank_0</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
         <spirit:name>src/cic_ctrl.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
+      <spirit:file>
+        <spirit:name>src/reg_bank_0/reg_bank_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+        <spirit:userFileType>CELL_NAME_reg_bank_instance</spirit:userFileType>
+      </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
-      <spirit:name>xilinx_anylanguagebehavioralsimulation_IpLibPauGomez_IpLibPauGomez_reg_bank_1_0__ref_view_fileset</spirit:name>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_DSPsandbox_FPGA_Notes_for_Scientists_reg_bank_1_0__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xilinx:vendor="IpLibPauGomez" xilinx:library="IpLibPauGomez" xilinx:name="reg_bank" xilinx:version="1.0">
+          <xilinx:componentRef xilinx:vendor="DSPsandbox" xilinx:library="FPGA-Notes-for-Scientists" xilinx:name="reg_bank" xilinx:version="1.0">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -758,7 +758,7 @@
       </spirit:file>
     </spirit:fileSet>
   </spirit:fileSets>
-  <spirit:description>CIC Filiter Control Logic</spirit:description>
+  <spirit:description>CIC Compiler Control</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>CONFIG_WIDTH</spirit:name>
@@ -773,27 +773,30 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
         <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
       </xilinx:supportedFamilies>
       <xilinx:taxonomies>
-        <xilinx:taxonomy>/IpLibPauGomez</xilinx:taxonomy>
+        <xilinx:taxonomy>/FPGA-Notes-for-Scientists</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>cic_ctrl</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:vendorDisplayName>IpLibPauGomez</xilinx:vendorDisplayName>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:upgrades>
-        <xilinx:canUpgradeFrom>user.org:user:cic_ctrl:1.0</xilinx:canUpgradeFrom>
-      </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2023-02-09T16:03:12Z</xilinx:coreCreationDateTime>
-      <xilinx:tags>
-      </xilinx:tags>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-10-22T21:09:34Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="e363bd64"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="8ea4ef50"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="e0bd9c12"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="97e0d26f"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fc916418"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="9bbd5780"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="09355727"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c86e3876"/>

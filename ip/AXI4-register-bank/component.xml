@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>DSPsandbox</spirit:vendor>
-  <spirit:library>FPGA-Notes-for-Scientist</spirit:library>
+  <spirit:library>FPGA-Notes-for-Scientists</spirit:library>
   <spirit:name>reg_bank</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
@@ -426,7 +426,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>fe655eb1</spirit:value>
+            <spirit:value>aae89eb2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -442,7 +442,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>fe655eb1</spirit:value>
+            <spirit:value>aae89eb2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -456,7 +456,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>bb57c1e3</spirit:value>
+            <spirit:value>dc3f6cc1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -470,7 +470,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>00538ae5</spirit:value>
+            <spirit:value>3ff5f767</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -484,7 +484,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>16328387</spirit:value>
+            <spirit:value>45a2f450</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -498,7 +498,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>b8136853</spirit:value>
+            <spirit:value>0f411c63</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2051,7 +2051,7 @@
       <spirit:file>
         <spirit:name>hdl/axi_reg_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_3c11b7ad</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_1179c93b</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -2102,7 +2102,7 @@
       <spirit:file>
         <spirit:name>xgui/reg_bank_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_00538ae5</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_3ff5f767</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -2581,7 +2581,7 @@
         <xilinx:taxonomy>/FPGA-Notes-for-Scientists</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>AXI4-register-bank</xilinx:displayName>
-      <xilinx:coreRevision>8</xilinx:coreRevision>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>DSPsandbox:FPGA-Notes-for-Scientist:axi_reg:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>DSPsandbox:FPGA-Notes-for-Scientist:Register_breakout:1.0</xilinx:canUpgradeFrom>
@@ -2589,8 +2589,9 @@
         <xilinx:canUpgradeFrom>DSPsandbox:FPGA-Notes-for-Scientist:AXI4_register_breakout:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>DSPsandbox:FPGA-Notes-for-Scientist:Register-bank:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>DSPsandbox:FPGA-Notes-for-Scientist:AXI4_reg:1.0</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>DSPsandbox:FPGA-Notes-for-Scientist:reg_bank:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2021-10-12T10:17:29Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2025-10-22T20:57:12Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7f991226_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/axi_reg_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4440aa2e_ARCHIVE_LOCATION">c:/Users/paugo/Documents/Pau/FPGA-Notes-for-Scientists/ip/axi_reg_1.0</xilinx:tag>
@@ -2995,10 +2996,10 @@
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
+      <xilinx:xilinxVersion>2024.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0312d308"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="a184dcef"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fa5aa36b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="451adad3"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="5f0ed17a"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="fcf1322a"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="c693d58b"/>

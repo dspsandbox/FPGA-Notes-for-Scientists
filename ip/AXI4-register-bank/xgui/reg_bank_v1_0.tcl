@@ -54,37 +54,67 @@ proc init_gui { IPINST } {
   #Adding Group
   set Reg_Adressing [ipgui::add_group $IPINST -name "Reg Adressing" -display_name {Adressing} -layout horizontal]
   set_property tooltip {Adressing} ${Reg_Adressing}
-  ipgui::add_static_text $IPINST -name "Reg In Addr" -parent ${Reg_Adressing} -text {Reg In 00 ---> 0x00                 
-Reg In 01 ---> 0x04                     
-Reg In 02 ---> 0x08                      
-Reg In 03 ---> 0x0C                     
-Reg In 04 ---> 0x10                     
-Reg In 05 ---> 0x14                      
-Reg In 06 ---> 0x18                       
-Reg In 07 ---> 0x1C                     
-Reg In 08 ---> 0x20                    
-Reg In 09 ---> 0x24                     
-Reg In 10 ---> 0x28                       
-Reg In 11 ---> 0x2C                     
-Reg In 12 ---> 0x30                      
-Reg In 13 ---> 0x34                       
-Reg In 14 ---> 0x38                       
+  ipgui::add_static_text $IPINST -name "Reg In Addr" -parent ${Reg_Adressing} -text {Reg In 00 ---> 0x00                 
+
+Reg In 01 ---> 0x04                     
+
+Reg In 02 ---> 0x08                      
+
+Reg In 03 ---> 0x0C                     
+
+Reg In 04 ---> 0x10                     
+
+Reg In 05 ---> 0x14                      
+
+Reg In 06 ---> 0x18                       
+
+Reg In 07 ---> 0x1C                     
+
+Reg In 08 ---> 0x20                    
+
+Reg In 09 ---> 0x24                     
+
+Reg In 10 ---> 0x28                       
+
+Reg In 11 ---> 0x2C                     
+
+Reg In 12 ---> 0x30                      
+
+Reg In 13 ---> 0x34                       
+
+Reg In 14 ---> 0x38                       
+
 Reg In 15 ---> 0x3C                      }
-  ipgui::add_static_text $IPINST -name "Reg Out Addr" -parent ${Reg_Adressing} -text {Reg Out 00 ---> 0x40
-Reg Out 01 ---> 0x44
-Reg Out 02 ---> 0x48
-Reg Out 03 ---> 0x4C
-Reg Out 04 ---> 0x50
-Reg Out 05 ---> 0x54
-Reg Out 06 ---> 0x58
-Reg Out 07 ---> 0x5C
-Reg Out 08 ---> 0x60
-Reg Out 09 ---> 0x64
-Reg Out 10 ---> 0x68
-Reg Out 11 ---> 0x6C
-Reg Out 12 ---> 0x70
-Reg Out 13 ---> 0x74
-Reg Out 14 ---> 0x78
+  ipgui::add_static_text $IPINST -name "Reg Out Addr" -parent ${Reg_Adressing} -text {Reg Out 00 ---> 0x40
+
+Reg Out 01 ---> 0x44
+
+Reg Out 02 ---> 0x48
+
+Reg Out 03 ---> 0x4C
+
+Reg Out 04 ---> 0x50
+
+Reg Out 05 ---> 0x54
+
+Reg Out 06 ---> 0x58
+
+Reg Out 07 ---> 0x5C
+
+Reg Out 08 ---> 0x60
+
+Reg Out 09 ---> 0x64
+
+Reg Out 10 ---> 0x68
+
+Reg Out 11 ---> 0x6C
+
+Reg Out 12 ---> 0x70
+
+Reg Out 13 ---> 0x74
+
+Reg Out 14 ---> 0x78
+
 Reg Out 15 ---> 0x7C}
 
 
