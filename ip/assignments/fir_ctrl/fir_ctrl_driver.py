@@ -2,7 +2,7 @@ import numpy as np
 
 class FirCtrl():
     """
-    FIR Filter Control driver class. 
+    FIR Filter Controller driver class. 
     
     NOTE: This driver only supports coefficient quantization mode: *Quantize Only*.
 
