@@ -41,7 +41,7 @@ module tb_pwm_sdm();
         resetn = 1; 
 
         // Wait for a few clock cycles
-      #100;
+        #100;
 
         // Test 1: Duty cycle 50%
         duty_cycle = 0.5 * 256;
