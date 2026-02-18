@@ -31,13 +31,14 @@ module tb_pwm_sdm();
 
     // Initial block for simulation
     initial begin
-        // Initialize inputs
+        // Initialize inputs and reset
         clk = 0;
         resetn = 0;
         duty_cycle = 0; 
+        #10
 
-        // Reset the PWM module
-        #10 resetn = 1; // Release reset after 10 time units
+        // Release reset  
+        resetn = 1; 
 
         // Wait for a few clock cycles
       #100;
@@ -54,8 +55,6 @@ module tb_pwm_sdm();
         // Test 3: Duty cycle 75%
         duty_cycle = 0.75 * 256;
         #10000;
-
-        
 
         // End simulation
         $finish;
