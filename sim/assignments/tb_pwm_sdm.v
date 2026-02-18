@@ -40,18 +40,18 @@ module tb_pwm_sdm();
         #10 resetn = 1; // Release reset after 10 time units
 
         // Wait for a few clock cycles
-        #100;
+      #100;
 
-        // Test 1: Duty cycle 50
+        // Test 1: Duty cycle 50%
         duty_cycle = 0.5 * 256;
         
         #10000; 
 
-        // Test 2: Duty cycle 10
+        // Test 2: Duty cycle 10%
         duty_cycle = 0.1 * 256;
         #10000;
 
-        // Test 3: Duty cycle 75
+        // Test 3: Duty cycle 75%
         duty_cycle = 0.75 * 256;
         #10000;
 
