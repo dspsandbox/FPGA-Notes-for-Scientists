@@ -10,7 +10,7 @@ class FirCtrl():
     :param ip_handle: PYNQ fir_ctrl instance.
     :param coef_width: FIR coefficient bit width (IP instantiation parameter).
     :param coef_fract: Number of fractional bits in FIR coefficient representation (IP instantiation parameter).
-    :param reload_order: List of coefficient indices describing the reload order, including possible zero paddings (IP instantiation parameter).
+    :param reload_order: List of coefficient indices describing the reload order (IP instantiation information).
 
     """
     def __init__(self, ip_handle, taps, coef_width, coef_fract, reload_order):
@@ -30,7 +30,7 @@ class FirCtrl():
         """
         Define FIR filter coefficients.
 
-        :val_list: List of FIR coefficients, including possible zero paddings (IP instantiation parameter).
+        :val_list: List of FIR coefficients.
         """        
         coef_lim_neg = - (2 ** (self._coef_width -  self._coef_fract - 1))
         coef_lim_pos =  (2 ** (self._coef_width -  self._coef_fract - 1)) - 2**(-self._coef_fract) 
